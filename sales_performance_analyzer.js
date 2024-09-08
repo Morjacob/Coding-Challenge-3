@@ -5,11 +5,11 @@ let calculateAverageSales = (sales) => {
     let averageSales = salesSum / sales.length;
     return averageSales
 }
-console.log (calculateAverageSales)
+console.log(calculateAverageSales);
 
 // Create a Function to Determine Performance Rating
 
-let determinePerformanceRating = (performanceRating) => {
+let determinePerformanceRating = (averageSales) => {
     if (averageSales > $10000) {
         return "excellent";   
     } else if (averageSales >= $7000 && averageSales <= $10000 ) {
@@ -24,16 +24,18 @@ console.log(determinePerformanceRating)
 
 // Create a Function to Identify Top and Bottom Performers
 
-let = findTopAndBottomPerformers = (workers) => { 
-    let performers = workers.reduce ((acc,person) => {
-        if (!acc.topPerformer || person.sales > acc.topPerfomer.sales) {
-            acc.topPerformer = person;
-        }
-        if (!acc.bottomPerformer || person.sales < acc.bottomPerfomer.sales) {
-            acc.bottomerPerformer = person;
-        }
-        return acc;
-    })
+const findTopAndBottomPerformers = (workers) => { 
+    const sales = workers.map(person => person.sales);
+    const maxSales = Math.max(...sales);
+    const minSales = Math.min(...sales);
+    const topPerformer = workers.find(person => person.sales === maxSales);
+    const bottomPerformer = workers.find(person => person.sales === minSales);
+    return { topPerformer, bottomPerformer };
 
 }
-console.log(findTopAndBottomPerformers)
+const result = findTopAndBottomPerformers(workers);
+console.log(`Top Performer:`, result.topPerformer);
+console.log(`Bottom Performer:`, result.bottomPerformer);
+
+// Combine Functions to Generate a Performance Report
+
