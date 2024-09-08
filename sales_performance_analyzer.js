@@ -5,8 +5,9 @@ let calculateAverageSales = (sales) => {
     let averageSales = salesSum / sales.length;
     return averageSales
 }
+console.log (calculateAverageSales)
 
-//Create a Function to Determine Performance Rating
+// Create a Function to Determine Performance Rating
 
 let determinePerformanceRating = (performanceRating) => {
     if (averageSales > $10000) {
@@ -19,3 +20,20 @@ let determinePerformanceRating = (performanceRating) => {
         return "Needs Improvement";
     }   
 }
+console.log(determinePerformanceRating)
+
+// Create a Function to Identify Top and Bottom Performers
+
+let = findTopAndBottomPerformers = (workers) => { 
+    let performers = workers.reduce ((acc,person) => {
+        if (!acc.topPerformer || person.sales > acc.topPerfomer.sales) {
+            acc.topPerformer = person;
+        }
+        if (!acc.bottomPerformer || person.sales < acc.bottomPerfomer.sales) {
+            acc.bottomerPerformer = person;
+        }
+        return acc;
+    })
+
+}
+console.log(findTopAndBottomPerformers)
