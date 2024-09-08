@@ -54,10 +54,10 @@ const generatePerformanceReport = (salesData) => {
         const rating = determinePerformanceRating(averageSales);
         return { name: person.name, average: averageSales, performanceRating: rating};
       });
-    }
-    const {topPerformer, bottomPerformer} = findTopAndBottomPerformers(salesData)
+    };
+   {const {topPerformer, bottomPerformer} = findTopAndBottomPerformers(salesData)
     return { topPerformer: topPerformer.sales.reduce((sum, sale) => sum +sale, 0),
-        bottomPerformer: bottomPerformer.sales.reduce((sum,sale)=>sum + sale, 0)}
+        bottomPerformer: bottomPerformer.sales.reduce((sum,sale)=>sum + sale, 0)}}
     
     
 
