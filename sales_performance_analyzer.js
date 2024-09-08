@@ -55,10 +55,10 @@ const generatePerformanceReport = (salesData) => {
         return { name: person.name, average: averageSales, performanceRating: rating};
       });
     };
-   {const {topPerformer, bottomPerformer} = findTopAndBottomPerformers(salesData)
-    return { topPerformer: topPerformer.sales.reduce((sum, sale) => sum +sale, 0),
-        bottomPerformer: bottomPerformer.sales.reduce((sum,sale)=>sum + sale, 0)}}
-    
+
+
+  console.log(`Top Performer:`, result.topPerformer);
+  console.log(`Bottom Performer:`, result.bottomPerformer);
     
 
   //Test Your Functions with Sample Data
