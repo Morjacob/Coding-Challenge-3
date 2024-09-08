@@ -24,6 +24,8 @@ console.log(determinePerformanceRating)
 
 // Create a Function to Identify Top and Bottom Performers
 
+const workers = ['Alice', 'Bob', 'Charlie', 'Diana'];
+
 const findTopAndBottomPerformers = (workers) => { 
     const sales = workers.map(person => person.sales);
     const maxSales = Math.max(...sales);
