@@ -56,8 +56,7 @@ const generatePerformanceReport = (salesData) => {
       });
     }
     const {topPerformer, bottomPerformer} = findTopAndBottomPerformers(salesData)
-    return 
-       { topPerformer: topPerformer.sales.reduce((sum, sale) => sum +sale, 0)},
+    return { topPerformer: topPerformer.sales.reduce((sum, sale) => sum +sale, 0),
         bottomPerformer: bottomPerformer.sales.reduce((sum,sale)=>sum + sale, 0)}
     
     
