@@ -11,17 +11,17 @@ console.log(`Average sales: $${calculateAverageSales(sales)}`);
 // Create a Function to Determine Performance Rating
 
 let determinePerformanceRating = (averageSales) => {
-    if (averageSales > $10000) {
+    if (averageSales > 10000) {
         return "excellent";   
-    } else if (averageSales >= $7000 && averageSales <= $10000 ) {
+    } else if (averageSales >= 7000 && averageSales <= 10000 ) {
         return "Good";
-    } else if (averageSales >= $4000 && averageSales < $7000 ) {
+    } else if (averageSales >= 4000 && averageSales < 7000 ) {
         return "Satisfactory";
     } else if (averageSales < 4000) {
         return "Needs Improvement";
     }   
 }
-console.log(determinePerformanceRating)
+console.log(`Performance Rating:$${determinePerformanceRating(averageSales)}`)
 
 // Create a Function to Identify Top and Bottom Performers
 
