@@ -1,12 +1,20 @@
 // Create a Function to Calculate Average Sales
 
 
+
+const salesData = [
+    { name: 'Alice', sales: [12000, 15000, 13000] },
+    { name: 'Bob', sales: [7000, 6000, 7500] },
+    { name: 'Charlie', sales: [3000, 4000, 3500] },
+    { name: 'Diana', sales: [9000, 8500, 9200] },
+
+];
+
 let calculateAverageSales = (sales) => {
     let salesSum = sales.reduce((sum, figure) => sum + figure,0 );
     let averageSales = salesSum / sales.length;
     return averageSales
 };
-
 
 // Create a Function to Determine Performance Rating
 
@@ -56,12 +64,5 @@ const generatePerformanceReport = (salesData) => {
 
   //Test Your Functions with Sample Data
 
-  const salesData = [
-    { name: 'Alice', sales: [12000, 15000, 13000] },
-    { name: 'Bob', sales: [7000, 6000, 7500] },
-    { name: 'Charlie', sales: [3000, 4000, 3500] },
-    { name: 'Diana', sales: [9000, 8500, 9200] },
-
-  ];
 const performanceReport = generatePerformanceReport(salesData);
 console.log (`Performance Report:`,performanceReport)
