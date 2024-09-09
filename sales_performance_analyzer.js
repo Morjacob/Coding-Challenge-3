@@ -1,6 +1,12 @@
 // Create a Function to Calculate Average Sales
 
+const salesData = [
+    { name: 'Alice', sales: [12000, 15000, 13000] },
+    { name: 'Bob', sales: [7000, 6000, 7500] },
+    { name: 'Charlie', sales: [3000, 4000, 3500] },
+    { name: 'Diana', sales: [9000, 8500, 9200] },
 
+];
 
 
 let calculateAverageSales = (sales) => {
@@ -9,6 +15,7 @@ let calculateAverageSales = (sales) => {
     return averageSales
 };
 
+console.log(`Average sales: $${calculateAverageSales(sales)}`);
 // Create a Function to Determine Performance Rating
 
 let determinePerformanceRating = (averageSales) => {
@@ -23,10 +30,12 @@ let determinePerformanceRating = (averageSales) => {
     }   
 };
 
+console.log(`Performance Rating:$${determinePerformanceRating(averageSales)}`)
+
 
 // Create a Function to Identify Top and Bottom Performers
 
-const workers = ['Alice', 'Bob', 'Charlie', 'Diana'];
+
 
 const findTopAndBottomPerformers = (workers) => { 
     const sales = workers.map(person => person.sales);
@@ -38,6 +47,9 @@ const findTopAndBottomPerformers = (workers) => {
 
 }
 const result = findTopAndBottomPerformers(workers);
+
+console.log(`Top Performer:`, result.topPerformer);
+console.log(`Bottom Performer:`, result.bottomPerformer);
 
 // Combine Functions to Generate a Performance Report
 
@@ -56,13 +68,7 @@ const generatePerformanceReport = (salesData) => {
 
   //Test Your Functions with Sample Data
 
-  const salesData = [
-    { name: 'Alice', sales: [12000, 15000, 13000] },
-    { name: 'Bob', sales: [7000, 6000, 7500] },
-    { name: 'Charlie', sales: [3000, 4000, 3500] },
-    { name: 'Diana', sales: [9000, 8500, 9200] },
 
-];
 
 const performanceReport = generatePerformanceReport(salesData);
 console.log (`Performance Report:`,performanceReport)
