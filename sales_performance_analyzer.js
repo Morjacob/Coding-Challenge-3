@@ -26,7 +26,14 @@ let determinePerformanceRating = (averageSales) => {
 
 // Create a Function to Identify Top and Bottom Performers
 
-const workers = ['Alice', 'Bob', 'Charlie', 'Diana'];
+
+const salesData = [
+    { name: 'Alice', sales: [12000, 15000, 13000] },
+    { name: 'Bob', sales: [7000, 6000, 7500] },
+    { name: 'Charlie', sales: [3000, 4000, 3500] },
+    { name: 'Diana', sales: [9000, 8500, 9200] },
+
+];
 
 const findTopAndBottomPerformers = (workers) => { 
     const sales = workers.map(person => person.sales);
@@ -58,13 +65,6 @@ const generatePerformanceReport = (salesData) => {
 
   //Test Your Functions with Sample Data
 
-  const salesData = [
-    { name: 'Alice', sales: [12000, 15000, 13000] },
-    { name: 'Bob', sales: [7000, 6000, 7500] },
-    { name: 'Charlie', sales: [3000, 4000, 3500] },
-    { name: 'Diana', sales: [9000, 8500, 9200] },
-
-];
 
 const performanceReport = generatePerformanceReport(salesData);
 console.log (`Performance Report:`,performanceReport)
