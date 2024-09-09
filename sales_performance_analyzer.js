@@ -9,14 +9,10 @@ const salesData = [
 ];
 
 
-let calculateAverageSales = (sales) => {
-    let salesSum = sales.reduce((sum, figure) => sum + figure,0 );
-    let averageSales = salesSum / sales.length;
-    return averageSales
-};
+let averageSales = calculateAverageSales(salesData[0].sales); // Get the sales for the first person
+   console.log(`Average sales: $${averageSales}`);
+   console.log(`Performance Rating: ${determinePerformanceRating(averageSales)}`);
 
-console.log(`Average sales: $${calculateAverageSales(sales)}`);
-// Create a Function to Determine Performance Rating
 
 let determinePerformanceRating = (averageSales) => {
     if (averageSales > 10000) {
