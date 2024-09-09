@@ -1,17 +1,12 @@
 // Create a Function to Calculate Average Sales
 
-const salesData = [
-    { name: 'Alice', sales: [12000, 15000, 13000] },
-    { name: 'Bob', sales: [7000, 6000, 7500] },
-    { name: 'Charlie', sales: [3000, 4000, 3500] },
-    { name: 'Diana', sales: [9000, 8500, 9200] },
 
-];
+let calculateAverageSales = (sales) => {
+    let salesSum = sales.reduce((sum, figure) => sum + figure,0 );
+    let averageSales = salesSum / sales.length;
+    return averageSales
+};
 
-
-let averageSales = calculateAverageSales(salesData[0].sales); // Get the sales for the first person
-   console.log(`Average sales: $${averageSales}`);
-   console.log(`Performance Rating: ${determinePerformanceRating(averageSales)}`);
 
 
 let determinePerformanceRating = (averageSales) => {
@@ -26,7 +21,7 @@ let determinePerformanceRating = (averageSales) => {
     }   
 };
 
-console.log(`Performance Rating:$${determinePerformanceRating(averageSales)}`)
+
 
 
 // Create a Function to Identify Top and Bottom Performers
@@ -44,8 +39,7 @@ const findTopAndBottomPerformers = (workers) => {
 }
 const result = findTopAndBottomPerformers(workers);
 
-console.log(`Top Performer:`, result.topPerformer);
-console.log(`Bottom Performer:`, result.bottomPerformer);
+
 
 // Combine Functions to Generate a Performance Report
 
