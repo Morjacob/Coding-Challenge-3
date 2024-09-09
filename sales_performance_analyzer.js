@@ -55,12 +55,14 @@ const generatePerformanceReport = (salesData) => {
         const rating = determinePerformanceRating(averageSales);
         return { name: person.name, average: averageSales, performanceRating: rating};
       });
-    };
+};
 
-
-  console.log(`Top Performer:`, result.topPerformer);
-  console.log(`Bottom Performer:`, result.bottomPerformer);
-    
+const {topPerformer, bottomPerformer} =findTopAndBottomPerformers(salesData);
+return{
+    performanceReport,
+    topPerformer,
+    bottomPerformer
+}
 
   //Test Your Functions with Sample Data
 
