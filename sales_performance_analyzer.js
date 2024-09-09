@@ -35,7 +35,7 @@ const salesData = [
 
 ];
 
-const findTopAndBottomPerformers = (workers) => { 
+const findTopAndBottomPerformers = (sales) => { 
     const sales = workers.map(person => person.sales);
     const maxSales = Math.max(...sales);
     const minSales = Math.min(...sales);
@@ -44,7 +44,7 @@ const findTopAndBottomPerformers = (workers) => {
     return { topPerformer, bottomPerformer };
 
 }
-const result = findTopAndBottomPerformers(workers);
+const result = findTopAndBottomPerformers(sales);
 
 
 
