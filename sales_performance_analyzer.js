@@ -55,16 +55,18 @@ const generatePerformanceReport = (salesData) => {
         const rating = determinePerformanceRating(averageSales);
         return { name: person.name, average: averageSales, performanceRating: rating};
       });
-};
+
 
 const {topPerformer, bottomPerformer} =findTopAndBottomPerformers(salesData);
 return{
     performanceReport,
     topPerformer,
     bottomPerformer
-}
+};
+};
 
-  //Test Your Functions with Sample Data
+
+//Test Your Functions with Sample Data
 
 
 const performanceReport = generatePerformanceReport(salesData);
